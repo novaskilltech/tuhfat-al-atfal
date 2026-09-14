@@ -45,7 +45,7 @@
   document.addEventListener('click', async e => { const b=e.target.closest('[data-copy]'); if (!b) return; const label=b.dataset.copyLabel || u.copy; try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent=u.copied; setTimeout(()=>b.textContent=label,1200); } catch { b.textContent=d.language==='fr'?'Sélectionnez le texte et copiez-le.':'حدّد النص وانسخه'; } });
   const cardLabels = d.language==='fr'
     ? {rule:'Règle',letters:'Lettres concernées',examples:'Applications coraniques',note:'Point de vigilance',download:'Télécharger la fiche',png:'PNG',jpeg:'JPEG',sheet:'Fiche',openSheets:'Voir les fiches'}
-    : {rule:'القاعدة',letters:'الحروف المعنية',examples:'تطبيقات قرآنية',note:'تنبيه مهم',download:'تنزيل الفيشة',png:'PNG',jpeg:'JPEG',sheet:'فيشة',openSheets:'عرض الفيشات'};
+    : {rule:'القاعدة',letters:'الحروف المعنية',examples:'تطبيقات قرآنية',note:'تنبيه مهم',download:'تنزيل البطاقة',png:'PNG',jpeg:'JPEG',sheet:'بطاقة',openSheets:'عرض البطاقات'};
   const normalizedCards = d.cards.map(c => Array.isArray(c) ? {title:c[0],letters:c[1],rule:c[2],cases:[{label:cardLabels.examples,examples:[c[3]]}]} : c);
   const sheetTones = [
     ['#123354','#087f8c','#e0f6f5'],['#29235c','#6252b0','#efeaff'],['#5b2d31','#a7554e','#fff0ee'],['#174a40','#1b8b78','#e4f7f1'],['#49315f','#8758aa','#f5ebff'],
