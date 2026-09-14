@@ -1,0 +1,13 @@
+{
+  "name": "tuhfat-al-atfal",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"process.exit(0)\""
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

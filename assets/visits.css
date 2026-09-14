@@ -1,0 +1,11 @@
+.landing-values{grid-template-columns:repeat(4,1fr)}
+.landing-values .visit-counter strong,.landing-strip .visit-counter strong{color:var(--teal)}
+.landing-strip{grid-template-columns:repeat(5,1fr)}
+
+@media (max-width:900px){
+  .landing-strip{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:800px){
+  .landing-values{grid-template-columns:1fr}
+}
