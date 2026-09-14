@@ -8,12 +8,12 @@
   const renderVerse = (lesson, verse) => {
     const [n, first, second] = verse;
     const isFr = d.language === 'fr';
-    const note = d.verseNotes?.[n];
+    const note = isFr ? window.TUHFA_VERSE_EXPLANATIONS_FR?.[n] : d.verseNotes?.[n];
     const commentary = d.chapterNotes?.[lesson.id];
     const basis = d.commentarySources?.[lesson.id];
     const translation = isFr ? window.TUHFA_VERSE_TRANSLATIONS?.[n] : null;
     const brief = note || (isFr ? `Le vers ${n} ancre l’idée suivante : ${lesson.rule}` : `البيت ${n} يثبّت أن ${lesson.rule}`);
-    const simple = note ? (isFr ? `Lisez ce sens à la lumière du chapitre « ${lesson.title} », puis identifiez dans l’exemple la condition qui déclenche la règle.` : `المعنى القريب: ${note} ثم انظر في المثال إلى الشرط الذي يترتب عليه الحكم.`) : (isFr ? `Lisez les mots du vers lentement, puis rattachez-les au chapitre « ${lesson.title} ». L’objectif pratique est d’identifier la règle avant de tenter son exécution.` : `اقرأ ألفاظ البيت ببطء، ثم اربطها بباب «${lesson.title}». المقصود العملي: أن تعرف موضع القاعدة قبل أن تحاول أداءها.`);
+    const simple = isFr && note ? note : (note ? `المعنى القريب: ${note} ثم انظر في المثال إلى الشرط الذي يترتب عليه الحكم.` : (isFr ? `Lisez les mots du vers lentement, puis rattachez-les au chapitre « ${lesson.title} ». L’objectif pratique est d’identifier la règle avant de tenter son exécution.` : `اقرأ ألفاظ البيت ببطء، ثم اربطها بباب «${lesson.title}». المقصود العملي: أن تعرف موضع القاعدة قبل أن تحاول أداءها.`));
     const detail = commentary ? `${commentary} ${note || ''}` : (isFr ? `Ce vers construit progressivement la compréhension de ${lesson.title}. Il ne suffit pas de mémoriser sa formule : repérez la cause citée, distinguez la lettre ou la condition dont dépend la règle, puis présentez votre lecture à un enseignant.` : `يبني هذا البيت فهمًا متدرجًا في ${lesson.title}. لا يكتفي الطالب بحفظ العبارة؛ بل يلاحظ السبب المذكور فيها، ويميّز الحروف أو الشرط الذي يتوقف عليه الحكم، ثم يعرض قراءته على معلّم.`);
     const lessonRefs = basis ? `${basis} ${d.sources}` : d.sources;
     const verseExample = d.verseExamples?.[n] || lesson.example;
