@@ -2,3 +2,4 @@
 .sites-runtime/
 node_modules/
 .vercel
+public/
