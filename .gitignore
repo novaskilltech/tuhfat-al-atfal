@@ -1,4 +1,4 @@
 .firecrawl/
 .sites-runtime/
 node_modules/
-
+.vercel
