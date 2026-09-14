@@ -19,6 +19,30 @@
     glossary:[
       ['Tajwīd','Donner à chaque lettre son droit et ce qui lui est dû, selon une transmission orale.'],['Nūn sākinah','Nūn sans voyelle, stable à la liaison comme à l’arrêt.'],['Tanwīn','Nūn ajoutée à l’oral, non écrite comme nūn, à la fin d’un nom.'],['Iẓhār','Prononcer distinctement la lettre depuis son point d’articulation.'],['Idghām','Faire entrer une lettre immobile dans une lettre vocalisée.'],['Iqlāb','Changer nūn/tanwīn en mīm cachée avant bāʾ avec ghunnah.'],['Ikhfāʾ','Prononcer entre iẓhār et idghām, en conservant la ghunnah.'],['Ghunnah','Résonance nasale qui sort du nez, liée à mīm et nūn.'],['Mīm sākinah','Mīm sans voyelle : ikhfāʾ, idghām ou iẓhār labial.'],['Iẓhār shafawī','Prononcer la mīm immobile devant toute lettre sauf bāʾ et mīm.'],['Lām lunaire','Lām de «الـ» qui est audible devant quatorze lettres.'],['Lām solaire','Lām de «الـ» assimilée à la lettre solaire suivante.'],['Mutamāthilayn','Deux lettres identiques par le point d’articulation et les attributs.'],['Mutajānisayn','Deux lettres de même articulation mais d’attributs différents.'],['Mutaqāribayn','Deux lettres proches par l’articulation ou les attributs.'],['Madd','Prolongation de la voix avec une lettre de madd ou de līn lorsque sa cause existe.'],['Madd naturel','Deux temps, sans hamzah ni sukūn comme cause.'],['Madd joint','Hamzah après la lettre de madd dans le même mot.'],['Madd séparé','Lettre de madd en fin de mot, hamzah au début du suivant.'],['Madd accidentel','Madd causé par un sukūn créé lors de l’arrêt.'],['Madd badal','Hamzah avant une lettre de madd dans un même mot.'],['Madd nécessaire','Sukūn originel après une lettre de madd, à la liaison et à l’arrêt.'],['Lettres de madd','Alif précédé d’une fatḥah, wāw d’une ḍammah, yāʾ d’une kasrah.'],['Lettre de līn','Wāw ou yāʾ immobile précédé d’une fatḥah.'],['Débuts de sourates','Lettres isolées qui ouvrent certaines sourates.']
     ],
+    commentarySources:{
+      intro:'Fatḥ al-aqfāl (al-Jamzūrī) ; Minḥat dhī al-jalāl (aḍ-Ḍabbāʿ).',
+      noon:'Fatḥ al-aqfāl ; Minḥat dhī al-jalāl ; Aysar al-maqāl.',
+      ghunna:'Fatḥ al-aqfāl ; Minḥat dhī al-jalāl.',
+      meem:'Fatḥ al-aqfāl ; Minḥat dhī al-jalāl ; Aysar al-maqāl.',
+      lam:'Fatḥ al-aqfāl ; Minḥat dhī al-jalāl.',
+      idgham:'Minḥat dhī al-jalāl ; Aysar al-maqāl ; avec retour à Fatḥ al-aqfāl.',
+      'madd-foundation':'Fatḥ al-aqfāl ; Minḥat dhī al-jalāl.',
+      'madd-rules':'Fatḥ al-aqfāl ; Minḥat dhī al-jalāl ; Aysar al-maqāl.',
+      'madd-lazim':'Fatḥ al-aqfāl ; Minḥat dhī al-jalāl ; Aysar al-maqāl.',
+      ending:'Fatḥ al-aqfāl ; Minḥat dhī al-jalāl.'
+    },
+    chapterNotes:{
+      intro:'Les commentaires expliquent la langue de l’ouverture et l’éthique de commencer par la louange et la prière.',
+      noon:'Les commentaires déterminent la règle en regardant la lettre qui suit la nūn sākinah ou le tanwīn, avec les conditions propres à chaque cas.',
+      ghunna:'Ils précisent que la ghunnah est une qualité de la mīm et de la nūn, particulièrement manifeste lorsqu’elles sont redoublées.',
+      meem:'Ils distinguent les trois cas d’après la lettre suivante et insistent sur le rôle des lèvres.',
+      lam:'Ils distinguent la lām de l’article défini de la lām verbale et leurs conditions d’exécution.',
+      idgham:'Ces vers sont des définitions ; l’application exacte se complète par une récitation contrôlée.',
+      'madd-foundation':'Les commentaires posent les conditions des lettres de madd et de līn, puis font du madd naturel la base des autres madd.',
+      'madd-rules':'Ils relient les durées à la riwāya et à la voie de lecture, et non à une estimation personnelle.',
+      'madd-lazim':'Ils répartissent le madd nécessaire selon le lieu du sukūn et l’assimilation, avec des règles propres aux lettres initiales.',
+      ending:'Ils expliquent la clôture par la louange, la prière, et la date obtenue par la valeur numérique des lettres.'
+    },
     cards:[
       ['Iẓhār de gorge','ء هـ ع ح غ خ','Prononcer distinctement la nūn sākinah ou le tanwīn, sans ghunnah ajoutée.','مِنْ عِلْمٍ — an-Najm, 53:28'],
       ['Idghām avec ghunnah','ي ن م و','Faire entrer la nūn/tanwīn dans la lettre suivante avec ghunnah.','مِنْ وَالٍ — ar-Raʿd, 13:11'],
