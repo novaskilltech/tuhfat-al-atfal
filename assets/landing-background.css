@@ -1,0 +1,17 @@
+body.landing-page{
+  background:
+    linear-gradient(104deg,rgba(2,20,31,.78) 0%,rgba(3,34,45,.6) 52%,rgba(4,29,41,.52) 100%),
+    url('landing-background.png') center/cover no-repeat fixed;
+}
+
+body.landing-page .landing-brand{color:#fff2cb}
+body.landing-page .landing-header p,
+body.landing-page .lead{color:#e5f0f2;text-shadow:0 1px 14px rgba(0,0,0,.45)}
+body.landing-page .landing h1{color:#fff5dc;text-shadow:0 3px 18px rgba(0,0,0,.34)}
+body.landing-page .landing h1 span{color:#7ce0db}
+body.landing-page .edition-card{background:rgba(255,255,255,.95)}
+body.landing-page .landing-values article{background:rgba(255,255,255,.9)}
+
+@media (max-width:800px){
+  body.landing-page{background-attachment:scroll}
+}
