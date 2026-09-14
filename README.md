@@ -2,7 +2,8 @@
 
 Site statique pédagogique autour de la *Tuḥfat al-aṭfāl* de Sulaymān al-Jamzūrī.
 
-- `index.html` : édition arabe.
+- `index.html` : page d’accueil et choix de l’édition.
+- `ar/index.html` : édition arabe.
 - `fr/index.html` : édition française indépendante.
 - `assets/content-ar.js` et `assets/content-fr.js` : contenu structuré par vers.
 - `assets/app.js` : recherche, affichage détaillé, quiz et fiches imprimables.
