@@ -68,7 +68,7 @@
     let y=254; y=wrap(card.title,y,w-pad*2,'700',69,'#ffffff',88);
     ctx.fillStyle='#ffffff'; ctx.globalAlpha=.95; ctx.fillRect(pad,y+20,w-pad*2,7); ctx.globalAlpha=1;
     const lineCount=(text,maxWidth,weight,size)=>{ctx.font=font(weight,size);let count=1,line='';String(text).split(/\s+/).forEach(word=>{const next=line?`${line} ${word}`:word;if(ctx.measureText(next).width>maxWidth&&line){count++;line=word;}else line=next;});return count;};
-    const panel=(label,content,top,tint='#ffffff')=>{const height=Math.max(178,132+lineCount(content,w-260,'600',39)*58);ctx.fillStyle=tint;ctx.beginPath();ctx.roundRect(70,top,w-140,height,28);ctx.fill();ctx.fillStyle=accent;ctx.fillRect(rtl?w-116:70,top,46,height);ctx.textAlign=rtl?'right':'left';ctx.font=font('700',27);ctx.fillStyle=accent;ctx.fillText(label,x,top+54);return wrap(content,top+106,w-260,'600',39,'#18233f',58)+38;};
+    const panel=(label,content,top,tint='#ffffff')=>{const height=Math.max(178,132+lineCount(content,w-260,'600',39)*58);ctx.fillStyle=tint;ctx.beginPath();ctx.roundRect(70,top,w-140,height,28);ctx.fill();ctx.fillStyle=accent;ctx.fillRect(rtl?70:w-116,top,46,height);ctx.textAlign=rtl?'right':'left';ctx.font=font('700',27);ctx.fillStyle=accent;ctx.fillText(label,x,top+54);return wrap(content,top+106,w-260,'600',39,'#18233f',58)+38;};
     y=465; y=panel(cardLabels.rule,card.rule,y,'#ffffff')+38;
     y=panel(cardLabels.letters,card.letters,y,soft)+42;
     const casesHeight=104+card.cases.reduce((sum,group)=>sum+60+group.examples.reduce((height,example)=>height+lineCount(`• ${example}`,w-260,'500',35)*52+16,0)+24,0)+28;
