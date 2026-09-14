@@ -23,13 +23,15 @@
     $('#lesson-list').innerHTML = d.lessons.map(l => {
       const rows = l.verses.filter(v => !q || fold(`${l.title} ${l.rule} ${v.join(' ')}`).includes(q));
       if (!rows.length) return ''; count += rows.length;
-      const further = l.further ? `<aside class="further-reading"><h4>${escape(l.further.title)}</h4><p>${escape(l.further.text)} <a href="${escape(l.further.url)}" target="_blank" rel="noreferrer">فتح المرجع</a></p></aside>` : '';
+      const further = l.further ? `<aside class="further-reading"><h4>${escape(l.further.title)}</h4><p>${escape(l.further.text)}</p></aside>` : '';
       return `<article class="lesson-group" id="${l.id}"><header><h3>${escape(l.title)}</h3><span class="range">${d.language==='fr'?'Vers':'الأبيات'} ${escape(l.range)}</span></header>${rows.map(v=>renderVerse(l,v)).join('')}${further}</article>`;
     }).join('') || `<p>${u.searchEmpty}</p>`;
     return count;
   };
   $('#toc-list').innerHTML = d.lessons.map(l=>`<a href="#${l.id}">${escape(l.title)} <small>(${escape(l.range)})</small></a>`).join('');
   renderLessons();
+  const nz = d.nuzhat;
+  $('#nuzhat-content').innerHTML = `<p class="nuzhat-intro">${escape(nz.author)}</p><p>${escape(nz.introduction)}</p><div class="nuzhat-grid">${nz.sections.map((s,i)=>`<article class="nuzhat-card"><p class="nuzhat-index">${String(i+1).padStart(2,'0')}</p><h3>${escape(s.title)}</h3><p>${escape(s.lead)}</p><ul>${s.points.map(p=>`<li>${escape(p)}</li>`).join('')}</ul><div class="nuzhat-example"><strong>${d.language==='fr'?'Exemple coranique':'مثال قرآني'}</strong><p>${escape(s.example)}</p></div><p><strong>${d.language==='fr'?'Exercice':'تطبيق'}</strong> — ${escape(s.practice)}</p><p class="source-line"><strong>${d.language==='fr'?'Lien avec la Tuḥfah':'صلة بالتحفة'}</strong> — ${escape(s.tuhfah)}</p></article>`).join('')}</div>`;
   $('#glossary-list').innerHTML = d.glossary.map(item=>`<article><h3>${escape(item[0])}</h3><p>${escape(item[1])}</p></article>`).join('');
   $('#search').addEventListener('input', e => renderLessons(e.target.value));
   document.addEventListener('click', async e => { const b=e.target.closest('[data-copy]'); if (!b) return; try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent=u.copied; setTimeout(()=>b.textContent=u.copy,1200); } catch { b.textContent=d.language==='fr'?'Sélectionnez le texte et copiez-le.':'حدّد النص وانسخه'; } });
