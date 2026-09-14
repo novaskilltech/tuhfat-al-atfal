@@ -23,7 +23,8 @@
     $('#lesson-list').innerHTML = d.lessons.map(l => {
       const rows = l.verses.filter(v => !q || fold(`${l.title} ${l.rule} ${v.join(' ')}`).includes(q));
       if (!rows.length) return ''; count += rows.length;
-      return `<article class="lesson-group" id="${l.id}"><header><h3>${escape(l.title)}</h3><span class="range">الأبيات ${escape(l.range)}</span></header>${rows.map(v=>renderVerse(l,v)).join('')}</article>`;
+      const further = l.further ? `<aside class="further-reading"><h4>${escape(l.further.title)}</h4><p>${escape(l.further.text)} <a href="${escape(l.further.url)}" target="_blank" rel="noreferrer">فتح المرجع</a></p></aside>` : '';
+      return `<article class="lesson-group" id="${l.id}"><header><h3>${escape(l.title)}</h3><span class="range">${d.language==='fr'?'Vers':'الأبيات'} ${escape(l.range)}</span></header>${rows.map(v=>renderVerse(l,v)).join('')}${further}</article>`;
     }).join('') || `<p>${u.searchEmpty}</p>`;
     return count;
   };
